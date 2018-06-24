@@ -56,6 +56,7 @@ extern ARM_UC_PAAL_UPDATE MBED_CLOUD_CLIENT_UPDATE_STORAGE;
 #endif
 
 #if MBED_CLOUD_CLIENT_UPDATE_STORAGE == ARM_UCP_FLASHIAP_BLOCKDEVICE
+#if 0
 #include "SDBlockDevice.h"
 
 /* initialise sd card blockdevice */
@@ -66,6 +67,13 @@ SDBlockDevice sd(MBED_CONF_APP_SPI_MOSI, MBED_CONF_APP_SPI_MISO,
 #else
 SDBlockDevice sd(MBED_CONF_SD_SPI_MOSI, MBED_CONF_SD_SPI_MISO,
                  MBED_CONF_SD_SPI_CLK,  MBED_CONF_SD_SPI_CS);
+#endif
+
+#else
+#include "SPIFBlockDevice.h"
+
+SPIFBlockDevice sd(MBED_CONF_SPIF_DRIVER_SPI_MOSI, MBED_CONF_SPIF_DRIVER_SPI_MISO,
+                 MBED_CONF_SPIF_DRIVER_SPI_CLK,  MBED_CONF_SPIF_DRIVER_SPI_CS);
 #endif
 
 BlockDevice* arm_uc_blockdevice = &sd;
