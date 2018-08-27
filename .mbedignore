@@ -89,3 +89,6 @@ mbed-cloud-client/nanostack-libservice/*
 mbed-cloud-client/ns-hal-pal/*
 mbed-cloud-client/sal-stack-nanostack-eventloop/*
 mbed-cloud-client/source/*
+mbed-os/features/cellular/*
+mbed-os/features/lorawan/*
+mbed-os/features/nvstore/*
