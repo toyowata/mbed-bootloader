@@ -49,6 +49,10 @@ const arm_uc_installer_details_t bootloader = {
     .layout   = BOOTLOADER_STORAGE_LAYOUT
 };
 
+#if defined(TARGET_WIO_3G)
+DigitalOut SD_POWER(PA_15, 1);
+#endif
+
 /* use a cut down version of ARM_UCP_FLASHIAP_BLOCKDEVICE to reduce
    binary size if ARM_UC_USE_PAL_BLOCKDEVICE is set and not running tests */
 #if defined(ARM_UC_USE_PAL_BLOCKDEVICE) && (ARM_UC_USE_PAL_BLOCKDEVICE==1) && \
