@@ -102,6 +102,10 @@
         },
         "NUCLEO_F429ZI": {
             "kvstore-size": "2*64*1024"
+        },
+        "TMPM46B": {
+            "target.components_add": ["FLASHIAP"],
+            "kvstore-size": "2*32*1024"
         }
     }
 }
