@@ -263,6 +263,22 @@
             "sd.SPI_CLK"                               : "A3",
             "target.features_remove"                   : ["CRYPTOCELL310"],
             "target.macros_remove"                     : ["MBEDTLS_CONFIG_HW_SUPPORT"]
+        },
+        "WIO_3G": {
+            "storage_filesystem.rbp_internal_size"      : "(2*16*1024)",
+            "target.device_has_remove"                  : [ "LPTICKER" ],
+            "sd.SPI_MOSI"                               : "PC_12",
+            "sd.SPI_MISO"                               : "PC_11",
+            "sd.SPI_CLK"                                : "PC_10",
+            "sd.SPI_CS"                                 : "PD_0"
+        },
+        "WIO_BG96": {
+            "storage_filesystem.rbp_internal_size"      : "(2*16*1024)",
+            "target.device_has_remove"                  : [ "LPTICKER" ],
+            "sd.SPI_MOSI"                               : "PC_12",
+            "sd.SPI_MISO"                               : "PC_11",
+            "sd.SPI_CLK"                                : "PC_10",
+            "sd.SPI_CS"                                 : "PD_0"
         }
     }
 }
