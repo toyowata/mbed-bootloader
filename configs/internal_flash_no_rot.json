@@ -92,11 +92,13 @@
             "update-client.storage-page": 1
         },
         "WIO_BG96": {
-            "kvstore-size": "2*64*1024",
+            "target.components_add"     : ["FLASHIAP"],
+            "kvstore-size": "2*16*1024",
             "update-client.storage-page": 1
         },
         "WIO_3G": {
-            "kvstore-size": "2*64*1024",
+            "target.components_add"     : ["FLASHIAP"],
+            "kvstore-size": "2*16*1024",
             "update-client.storage-page": 1
         }
     }
